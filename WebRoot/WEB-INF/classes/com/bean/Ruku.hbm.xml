@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Ruku" table="t_ruku" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="rkid"/>
+		<property name="kcid" />
+		<property name="channame"/>
+		<property name="ckname"/>
+		<property name="rkleixing"/>
+		<property name="beizhu"/>
+		<property name="rkshuliang"/>
+		<property name="rktime"/>
+		<property name="shren"/>
+		<property name="ckren"/>
+	</class>
+</hibernate-mapping>

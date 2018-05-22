@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "./struts-2.0.dtd">
+
+<struts>
+<constant name="struts.custom.i18n.resources" value="message"></constant>
+<constant name="struts.i18n.encoding" value="utf-8"></constant>
+<constant name="struts.objcetFactory" value="spring"/>
+ <package name="struts2" extends="struts-default">
+ 	
+ 	<interceptors>
+ 		<interceptor name="myInterceptor" class="com.util.MyInteceptor"></interceptor>
+ 		<interceptor-stack name="myStack">
+ 			<interceptor-ref name="myInterceptor"></interceptor-ref>
+ 			<interceptor-ref name="defaultStack"></interceptor-ref>
+ 		</interceptor-stack>
+ 	</interceptors>
+ 	<default-interceptor-ref name="myStack"></default-interceptor-ref>
+    <global-results>
+ 		<result name="exception">./exception.jsp</result>
+ 		<result name="login1" type="redirect">/login.html</result>
+ 	</global-results>
+ 
+ 	<global-exception-mappings>
+ 		<exception-mapping result="exception" exception="java.lang.RuntimeException"/>
+ 	</global-exception-mappings>
+ 	
+	<action name="user" class="userAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/yonghushow.jsp</result>
+	  <result name="showone">/yonghushowone.jsp</result>
+	  <result name="showone1">/yonghushowone1.jsp</result>
+	  <result name="findstr">/yonghushow1.jsp</result>
+	  <result name="login">/main.html</result>
+	  <result name="updatepass">/yongyuupdatesuccess.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="yanchan" class="yanchanAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/yanchanshow.jsp</result>
+	  <result name="find">/yanchanshow1.jsp</result>
+	  <result name="showone">/yanchanshowone.jsp</result>
+	  <result name="showone1">/yanchanshowone1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="chanpin" class="chanpinAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="showshang">/chanshowshang.jsp</result>
+	  <result name="showone2">/chanshowone2.jsp</result>
+	  <result name="showone">/chanshowone.jsp</result>
+	  <result name="showone1">/chanshowone1.jsp</result>
+	  <result name="showone2">/chanshowone2.jsp</result>
+	  <result name="findshang">/chanshowshang1.jsp</result>
+	  <result name="showxia">/chanshowxia.jsp</result>
+	  <result name="findxia">/chanshowxia1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="shichang" class="shichangAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/shishow.jsp</result>
+	  <result name="find">/shishow1.jsp</result>
+	  <result name="showone">/shishowone.jsp</result>
+	  <result name="showone1">/shishowone1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="jingzheng" class="jingzhengAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/jingshow.jsp</result>
+	  <result name="showone">/jingshowone.jsp</result>
+	  <result name="showone1">/jingshowone1.jsp</result>
+	  <result name="find">/jingshow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="yingxiao" class="yingxiaoAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/yingshow.jsp</result>
+	  <result name="showone">/yingshowone.jsp</result>
+	  <result name="showone1">/yingshowone1.jsp</result>
+	  <result name="find">/yingshow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="qianzai" class="qianzaiAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="sud" type="redirect">qianzai!show.action</result>
+	  <result name="show">/kehu/qianshow.jsp</result>
+	  <result name="showone">/kehu/qianshowone.jsp</result>
+	  <result name="showone1">/kehu/qianshowone1.jsp</result>
+	  <result name="zhuan">/kehu/qianfind.jsp</result>
+	  <result name="find">/kehu/qianshow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="kehu" class="kehuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="showinsert">/kehu/kesave.jsp</result>
+	  <result name="sud" type="redirect">kehu!show.action</result>
+	  <result name="show">/kehu/keshow.jsp</result>
+	  <result name="showone">/kehu/keshowone.jsp</result>
+	  <result name="showone1">/kehu/keshowone1.jsp</result>
+	  <result name="showone2">/kehu/keshowone2.jsp</result>
+	  <result name="zhuan">/kehu/kefind.jsp</result>
+	  <result name="find">/kehu/keshow1.jsp</result>
+	  <result name="xinyushow">/kehu/kexinyudu.jsp</result>
+	  <result name="zhongchengshow">/kehu/kezhongchengdu.jsp</result>
+	  <result name="wanbi">/kehu/wanbi.jsp</result>
+	  <result name="xinzhuan" type="redirect">/kehu/kexinyudu.jsp</result>
+	  <result name="zhongzhuan" type="redirect">/kehu/kezhongchengdu.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="liuke" class="liukeAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">kehu/liushow.jsp</result>
+	  <result name="showone">/kehu/liushowone.jsp</result>
+	  <result name="showone1">/kehu/liushowone1.jsp</result>
+	  <result name="sud" type="redirect">liuke!show.action</result>
+	  <result name="zhuan">/kehu/liufind.jsp</result>
+	  <result name="find">/kehu/liushow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="fuwu" class="fuwuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="showinsert">/fuwu/fusave.jsp</result>
+	  <result name="save" type="redirect">kehu!show.action</result>
+	</action>
+	<action name="tousu" class="tousuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/fuwu/toushow.jsp</result>
+	  <result name="show1">/fuwu/toushow1.jsp</result>
+	  <result name="showone">/fuwu/toushowone.jsp</result>
+	  <result name="showone1">/fuwu/toushowone1.jsp</result>
+	  <result name="sud" type="redirect">tousu!show.action</result>
+	  <result name="zhuan">/fuwu/toufind.jsp</result>
+	</action>
+	<action name="zixun" class="zixunAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/fuwu/zishow.jsp</result>
+	  <result name="show1">/fuwu/zishow1.jsp</result>
+	  <result name="showone">/fuwu/zishowone.jsp</result>
+	  <result name="showone1">/fuwu/zishowone1.jsp</result>
+	  <result name="sud" type="redirect">zixun!show.action</result>
+	  <result name="zhuan">/fuwu/zifind.jsp</result>
+	</action>
+	<action name="huifang" class="huifangAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="show">/fuwu/huishow.jsp</result>
+	  <result name="showone">/fuwu/huishowone.jsp</result>
+	  <result name="showone1">/fuwu/huishowone1.jsp</result>
+	  <result name="sud" type="redirect">huifang!show.action</result>
+	  <result name="zhuan">/fuwu/huifind.jsp</result>
+	  <result name="show1">/fuwu/huishow1.jsp</result>
+	</action>
+	<action name="cangku" class="cangkuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="sud" type="redirect">cangku!show.action</result>
+	  <result name="show">/cangku/ckshow.jsp</result>
+	  <result name="showone">/cangku/ckshowone.jsp</result>
+	  <result name="showone1">/cangku/ckshowone1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="kucun" class="kucunAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="insert">/cangku/kcsave.jsp</result>
+	  <result name="sud" type="redirect">kucun!show.action</result>
+	  <result name="show">/cangku/kcshow.jsp</result>
+	  <result name="showone">/cangku/kcshowone.jsp</result>
+	  <result name="zhuan">/cangku/kcfind.jsp</result>
+	  <result name="show1">/cangku/kcshow1.jsp</result>
+	  <result name="yujing">/cangku/kcyujing.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="ruku" class="rukuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="insert">/cangku/rksave.jsp</result>
+	  <result name="sud" type="redirect">ruku!show.action</result>
+	  <result name="show">/cangku/rkshow.jsp</result>
+	  <result name="showone">/cangku/rkshowone.jsp</result>
+	  <result name="zhuan">/cangku/rkfind.jsp</result>
+	  <result name="show1">/cangku/rkshow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="chuku" class="chukuAction">
+	  <result name="input">/exception.jsp</result>
+	  <result name="insert">/cangku/chksave.jsp</result>
+	  <result name="sud" type="redirect">chuku!show.action</result>
+	  <result name="show">/cangku/chkshow.jsp</result>
+	  <result name="showone">/cangku/chkshowone.jsp</result>
+	  <result name="zhuan">/cangku/chkfind.jsp</result>
+	  <result name="show1">/cangku/chkshow1.jsp</result>
+	  <result name="no">/quanxian.jsp</result>
+	</action>
+	
+	<action name="xiaoshou" class="xiaoshouAction">
+	   <result name="input">/exception.jsp</result>
+	   <result name="showinsert">/xiaoshou/xiaosave.jsp</result>
+	   <result name="sud" type="redirect">xiaoshou!show.action</result>
+	   <result name="show">/xiaoshou/dingshow.jsp</result>
+	   <result name="showone">/xiaoshou/dingshowone.jsp</result>
+	   <result name="showone1">/xiaoshou/dingshowone1.jsp</result>
+	   <result name="show1">/xiaoshou/dingshen.jsp</result>
+	   <result name="showonefh">/xiaoshou/dingfh.jsp</result>
+	   <result name="showonetd">/xiaoshou/dingtd.jsp</result>
+	   <result name="showoneshen">/xiaoshou/dingshenone.jsp</result>
+	   <result name="update1" type="redirect">xiaoshou!show1.action</result>
+	   <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="fahuo" class="fahuoAction">
+	    <result name="input">/exception.jsp</result>
+	    <result name="show">/xiaoshou/fashow.jsp</result>
+	    <result name="showone">/xiaoshou/fashowone.jsp</result>
+	    <result name="showone1">/xiaoshou/fashowone1.jsp</result>
+	    <result name="sud" type="redirect">fahuo!show.action</result>
+	    <result name="zhuan">/xiaoshou/fafind.jsp</result>
+	    <result name="find">/xiaoshou/fashow1.jsp</result>
+	    <result name="showoneth">/xiaoshou/thsave.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	    
+	</action>
+	<action name="tuidan" class="tuidanAction">
+	    <result name="input">/exception.jsp</result>   
+	    <result name="show">/xiaoshou/tuishow.jsp</result>
+	    <result name="showone">/xiaoshou/tuishowone.jsp</result>
+	    <result name="showone1">/xiaoshou/tuishowone1.jsp</result>
+	    <result name="sud" type="redirect">tuidan!show.action</result>
+	    <result name="zhuan">/xiaoshou/tuifind.jsp</result>
+	    <result name="find">/xiaoshou/tuishow1.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="tuihuo" class="tuihuoAction">
+	    <result name="input">/exception.jsp</result>
+	    <result name="show">/xiaoshou/thshow.jsp</result>
+	    <result name="showone">/xiaoshou/thshowone.jsp</result>
+	    <result name="showone1">/xiaoshou/thshowone1.jsp</result>
+	    <result name="sud" type="redirect">tuihuo!show.action</result>
+	    <result name="zhuan">/xiaoshou/thfind.jsp</result>
+	    <result name="find">/xiaoshou/thshow1.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="xiaofen" class="xiaofenAction">
+	    <result name="input">/exception.jsp</result>
+	    <result name="fenxi">/xiaoshou/xiaofenxi.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="shoukuan" class="shoukuanAction">
+	    <result name="input">/exception.jsp</result>
+	    <result name="sud" type="redirect">shoukuan!show.action</result>
+	    <result name="show">/xiaoshou/shkshow.jsp</result>
+	    <result name="showone">/xiaoshou/shkshowone.jsp</result>
+	    <result name="zhuan">/xiaoshou/shkfind.jsp</result>
+	    <result name="find">/xiaoshou/shkshow1.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	</action>
+	<action name="tuikuan" class="tuikuanAction">
+	    <result name="input">/exception.jsp</result>
+	    <result name="sud" type="redirect">tuikuan!show.action</result>
+	    <result name="show">/xiaoshou/tkshow.jsp</result>
+	    <result name="showone">/xiaoshou/tkshowone.jsp</result>
+	    <result name="zhuan">/xiaoshou/tkfind.jsp</result>
+	    <result name="find">/xiaoshou/tkshow1.jsp</result>
+	    <result name="no">/quanxian.jsp</result>
+	    
+	</action>
+	
+	<action name="shengchan" class="shengChanAction">
+		<result name="success">/shengchanshow.jsp</result>
+		<result name="add_success" type="redirect">shengchan.action</result>
+		<result name="delete_success" type="redirect">shengchan.action</result>
+		<result name="update_success" type="redirect">shengchan.action</result>
+		<result name="update_input">/shengchanupdate.jsp</result>
+		<result name="show_shengchan">/shengchanshowone.jsp</result>
+	</action>
+	
+	<action name="gongYingShang" class="gongYingShangAction">
+		<result name="success">/gongyingshangshow.jsp</result>
+		<result name="add_success" type="redirect">gongYingShang.action</result>
+		<result name="delete_success" type="redirect">gongYingShang.action</result>
+		<result name="update_success" type="redirect">gongYingShang.action</result>
+		<result name="update_input">/gongyingshangupdate.jsp</result>
+		<result name="show_gongyingshang">/gongyingshangshowone.jsp</result>
+	</action>
+	<action name="wuliao" class="wuliaoAction">
+		<result name="show">/wuliaoshow.jsp</result>
+		<result name="sud" type="redirect">wuliao!show.action</result>
+		<result name="showone">/wuliaoupdate.jsp</result>
+	</action>
+	<action name="caigou" class="caigouAction">
+		<result name="show">/caigoushow.jsp</result>
+		<result name="sud" type="redirect">caigou!show.action</result>
+		<result name="showone">/caigoushowone.jsp</result>
+		<result name="showone1">/caigouupdate.jsp</result>
+	</action>
+ </package>
+</struts>

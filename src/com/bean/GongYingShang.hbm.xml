@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.GongYingShang" table="t_gongyingshang" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="googid"/>
+		<property name="gonggname"/>
+		<property name="dizhi"/>
+		<property name="lianxiren"/>
+		<property name="liaophone"/>
+		<property name="yinhang"/>
+		<property name="yinhangid"/>
+
+	</class>
+</hibernate-mapping>

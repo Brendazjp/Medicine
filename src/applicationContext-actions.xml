@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" -->
+<!--" http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	
+	<bean id="userAction" class="com.action.UserAction" >
+		<property name="userService" ref="userService"/>
+	</bean>
+	<bean id="yanchanAction" class="com.action.YanchanAction" >
+		<property name="yanchanService" ref="yanchanService"/>
+	</bean>
+	<bean id="chanpinAction" class="com.action.ChanpinAction" >
+		<property name="chanpinService" ref="chanpinService"/>
+	</bean>
+	<bean id="shichangAction" class="com.action.ShichangAction" >
+		<property name="shichangSevice" ref="shichangService"/>
+	</bean>
+	<bean id="jingzhengAction" class="com.action.JingzhengAction" >
+		<property name="jingzhengService" ref="jingzhengService"/>
+	</bean>
+	<bean id="yingxiaoAction" class="com.action.YingxiaoAction" >
+		<property name="yingxiaoService" ref="yingxiaoService"/>
+	</bean>
+	<bean id="qianzaiAction" class="com.action.QianzaiAction" >
+		<property name="qianzaiService" ref="qianzaiService"/>
+	</bean>
+	<bean id="kehuAction" class="com.action.KehuAction" >
+		<property name="kehuService" ref="kehuService"/>
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="liukeAction" class="com.action.LiukeAction" >
+		<property name="kehuService" ref="kehuService"/>
+	</bean>
+	<bean id="fuwuAction" class="com.action.FuwuAction" >
+		<property name="fuwuService" ref="fuwuService"/>
+	</bean>
+	<bean id="tousuAction" class="com.action.TousuAction" >
+		<property name="fuwuService" ref="fuwuService"/>
+	</bean>
+	<bean id="zixunAction" class="com.action.ZixunAction" >
+		<property name="fuwuService" ref="fuwuService"/>
+	</bean>
+	<bean id="huifangAction" class="com.action.HuifangAction" >
+		<property name="fuwuService" ref="fuwuService"/>
+	</bean>
+	<bean id="xiaoshouAction" class="com.action.XiaoshouAction" >
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="fahuoAction" class="com.action.FahuoAction" >
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="tuidanAction" class="com.action.TuidanAction" >
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="tuihuoAction" class="com.action.TuihuoAction" >
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="xiaofenAction" class="com.action.XiaofenAction" >
+		<property name="xiaoshouService" ref="xiaoshouService"/>
+	</bean>
+	<bean id="cangkuAction" class="com.action.CangkuAction" >
+		<property name="cangkuService" ref="cangkuService"/>
+	</bean>
+	<bean id="kucunAction" class="com.action.KucunAction" >
+		<property name="kucunService" ref="kucunService"/>
+	</bean>
+	<bean id="rukuAction" class="com.action.RukuAction" >
+		<property name="rukuService" ref="rukuService"/>
+		<property name="kucunService" ref="kucunService"/>
+	</bean>
+	<bean id="chukuAction" class="com.action.ChukuAction" >
+		<property name="chukuService" ref="chukuService"/>
+		<property name="kucunService" ref="kucunService"/>
+	</bean>
+	<bean id="shoukuanAction" class="com.action.ShoukuanAction" >
+		<property name="shoukuanService" ref="shoukuanService"/>
+		<property name="kehuService" ref="kehuService"/>
+	</bean>
+	<bean id="tuikuanAction" class="com.action.TuikuanAction" >
+		<property name="tuikuanService" ref="tuikuanService"/>
+	</bean>
+	
+	<bean id="shengChanAction" class="com.action.ShengChanAction">
+		<property name="shengChanService" ref="shengChanService"/>
+	</bean>
+	
+	<bean id="gongYingShangAction" class="com.action.GongYingShangAction">
+		<property name="gongYingShangService" ref="gongYingShangService"/>
+	</bean>
+	<bean id="wuliaoAction" class="com.action.WuliaoAction">
+		<property name="wuliaoService" ref="wuliaoService"/>
+	</bean>
+	<bean id="caigouAction" class="com.action.CaigouAction">
+		<property name="caigouService" ref="caigouService"/>
+	</bean>
+</beans>

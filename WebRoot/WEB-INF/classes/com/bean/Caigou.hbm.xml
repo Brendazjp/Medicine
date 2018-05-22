@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Caigou" table="t_caigou" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="caigouid"/>
+		<property name="gongid" />
+		<property name="wuliaoid"/>
+		<property name="shouliang"/>
+		<property name="jine"/>
+		<property name="caitime"/>
+	</class>
+</hibernate-mapping>

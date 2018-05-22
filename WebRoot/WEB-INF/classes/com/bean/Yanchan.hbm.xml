@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Yanchan" table="t_yanchan" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="yanchanid"/>
+		<property name="yanchaname" />
+		<property name="yanjin" />
+		<property name="yanrenshu" />
+		<property name="yanchanlei" />
+		<property name="yanfuid" />
+		<property name="yanfuname" />
+		<property name="yanfulianxi" />
+		<property name="yankatime" />
+		<property name="yanjietime" />
+		<property name="yangong" />
+		<property name="yanchen" />
+		<property name="yanbei" />
+	</class>
+</hibernate-mapping>

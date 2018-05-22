@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Chanpin" table="t_chanpin" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="chanid"/>
+		<property name="channame" />
+		<property name="piwenhao"/>
+		<property name="leixing"/>
+		<property name="jixing"/>
+		<property name="guige"/>
+		<property name="jiage"/>
+		<property name="chengfen"/>
+		<property name="gongneng"/>
+		<property name="yongfa"/>
+		<property name="buliang"/>
+		<property name="jinji"/>
+		<property name="zhuyi"/>
+		<property name="youxiaoqi"/>
+		<property name="shangtime"/>
+		<property name="xiatime"/>
+		<property name="xiayanyin"/>
+		<property name="biaozhi"/>
+	</class>
+</hibernate-mapping>

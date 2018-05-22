@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://directwebremoting.org/schema/dwr20.dtd">
+
+<dwr>
+ <allow>
+ <!--  
+  	 <create creator="new" javascript="test">
+  	 	<param name="class" value="com.dwr.DWRTest"></param>
+  	 </create>
+  -->
+     <create creator="spring" javascript="test">
+  	 	<param name="beanName" value="userService">
+  	 	</param>
+  	 </create>
+  	  <create creator="spring" javascript="search">
+  	 	<param name="beanName" value="kehuService"></param>
+  	 </create>
+  	 <create creator="spring" javascript="test1">
+  	 	<param name="beanName" value="xiaoshouService"></param>
+  	 </create>
+  	  <create creator="spring" javascript="test2">
+  	 	<param name="beanName" value="kucunService"></param>
+  	 </create>
+  	 <create creator="spring" javascript="test3">
+  	 	<param name="beanName" value="shoukuanService"></param>
+  	 </create>
+  	 <convert converter="bean" match="com.bean.Xiaoshou"/>
+  	 <convert converter="bean" match="com.bean.Kehu"/>
+  	 <convert converter="bean" match="com.bean.Shichang"/>
+  	 <convert converter="bean" match="com.bean.Chanpin"/>
+  	 <create creator="spring" javascript="test4">
+  	 	<param name="beanName" value="tuikuanService"></param>
+  	 </create>
+  	 <create creator="spring" javascript="test5">
+  	 	<param name="beanName" value="yanchanService"></param>
+  	 </create>
+  	  <create creator="spring" javascript="test6">
+  	 	<param name="beanName" value="chanpinService"></param>
+  	 </create>
+  	  <create creator="spring" javascript="test7">
+  	 	<param name="beanName" value="shichangService"></param>
+  	 </create>
+  	  <create creator="spring" javascript="test8">
+  	 	<param name="beanName" value="jingzhengService"></param>
+  	 </create>
+  	  <create creator="spring" javascript="test9">
+  	 	<param name="beanName" value="kehuService"></param>
+  	 </create>
+  	 <create creator="spring" javascript="test10">
+  	 	<param name="beanName" value="qianzaiService"></param>
+  	 </create>
+  </allow>
+
+
+</dwr>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Jingzheng" table="t_jingzheng" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="jingid"/>
+		<property name="jingname" />
+		<property name="leixing" />
+		<property name="jingzhengli" />
+		<property name="jilutime" />
+		<property name="dizhi" />
+		<property name="chanpin" />
+		<property name="quyu" />
+		<property name="celue" />
+		<property name="zhuangkuang" />
+		<property name="beijing" />
+		<property name="beizhu" />
+	</class>
+</hibernate-mapping>

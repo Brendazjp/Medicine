@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" -->
+<!--" http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<bean id="userService" class="com.service.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDao" />
+	</bean>
+	<bean id="yanchanService" class="com.service.impl.YanchanServiceImpl">
+		<property name="yanchanDAO" ref="yanchanDao" />
+	</bean>
+	<bean id="chanpinService" class="com.service.impl.ChanpinServiceImpl">
+		<property name="chanpinDao" ref="chanpinDao" />
+	</bean>
+	<bean id="shichangService" class="com.service.impl.ShichangServiceImpl">
+		<property name="shichangDao" ref="shichangDao" />
+	</bean>
+	<bean id="kehuService" class="com.service.impl.KehuServiceImpl">
+		<property name="kehuDao" ref="kehuDao" />
+		<property name="shichangDao" ref="shichangDao" />
+	</bean>
+	<bean id="jingzhengService" class="com.service.impl.JingzhengServiceImpl">
+		<property name="jingzhengDao" ref="jingzhengDao" />
+	</bean>
+	<bean id="yingxiaoService" class="com.service.impl.YingxiaoServiceImpl">
+		<property name="yingxiaoDao" ref="yingxiaoDao" />
+	</bean>
+	<bean id="qianzaiService" class="com.service.impl.QianzaiServiceImpl">
+		<property name="qianzaiDao" ref="qianzaiDao" />
+	</bean>
+    <bean id="fuwuService" class="com.service.impl.FuwuServiceImpl">
+		<property name="fuwuDao" ref="fuwuDao"/>
+		<property name="kefuDao" ref="kehuDao"/>
+	</bean>
+	<bean id="xiaoshouService" class="com.service.impl.XiaoshouServiceImpl">
+		<property name="xiaoshouDao" ref="xiaoshouDao" />
+		<property name="kehuDao" ref="kehuDao"/>
+		<property name="chanpinDao" ref="chanpinDao" />
+	</bean>
+	<bean id="cangkuService" class="com.service.impl.CangkuServiceImpl">
+		<property name="cangkuDao" ref="cangkuDao" />
+	</bean>
+	<bean id="kucunService" class="com.service.impl.KucunServiceImpl">
+		<property name="kucunDao" ref="kucunDao" />
+		<property name="cangkuDao" ref="cangkuDao"/>
+		<property name="chanpinDao" ref="chanpinDao" />
+	</bean>
+	<bean id="rukuService" class="com.service.impl.RukuServiceImpl">
+		<property name="rukuDao" ref="rukuDao" />
+		<property name="kucunDao" ref="kucunDao" />
+	</bean>
+	<bean id="chukuService" class="com.service.impl.ChukuServiceImpl">
+		<property name="chukuDao" ref="chukuDao" />
+		<property name="kucunDao" ref="kucunDao" />
+	</bean>
+	<bean id="shoukuanService" class="com.service.impl.ShoukuanServiceImpl">
+		<property name="shoukuanDao" ref="shoukuanDao" />
+		<property name="xiaoshouDao" ref="xiaoshouDao" />
+	</bean>
+	<bean id="tuikuanService" class="com.service.impl.TuikuanServiceImpl">
+		<property name="tuikuanDao" ref="tuikuanDao" />
+		<property name="shoukuanDao" ref="shoukuanDao" />
+	</bean>
+	
+	<bean id="shengChanService" class="com.service.impl.ShengChanServiceImpl">
+		<property name="shengChanDao" ref="shengChanDao" />
+	</bean>
+	
+	<bean id="gongYingShangService" class="com.service.impl.GongYingShangServiceImpl">
+		<property name="gongYingShangDao" ref="gongYingShangDao"/>
+	</bean>
+	<bean id="wuliaoService" class="com.service.impl.WuliaoServiceImpl">
+		<property name="wuliaoDao" ref="wuliaoDao"/>
+	</bean>
+	<bean id="caigouService" class="com.service.impl.CaigouServiceImpl">
+		<property name="caigouDao" ref="caigouDao"/>
+	</bean>
+</beans>

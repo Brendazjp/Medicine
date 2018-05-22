@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Shichang" table="t_shichang" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="shichangid"/>
+		<property name="diqu"/>
+		<property name="chengshi" />
+		<property name="jingji"/>
+		<property name="jieri"/>
+		<property name="funame"/>
+		<property name="fulianxi"/>
+		<property name="celue"/>
+		<property name="beizhu"/>
+	</class>
+</hibernate-mapping>

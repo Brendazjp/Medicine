@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Cangku" table="t_cangku" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="ckname"/>
+		<property name="dizhi" />
+		<property name="mianji"/>
+		<property name="shitime"/>
+		<property name="chanlei"/>
+		<property name="ckphone"/>
+		<property name="fuzeren"/>
+		<property name="fuphone"/>
+		
+	</class>
+</hibernate-mapping>

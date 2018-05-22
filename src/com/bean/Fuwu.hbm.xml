@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Fuwu" table="t_fuwu" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="fuwuid"/>
+		<property name="fuleibei" />
+		<property name="futime"/>
+		<property name="jiluren" />
+		<property name="neirong"/>
+		<property name="fangfa" />
+		<property name="jieguo"/>
+		<property name="beizhu" />
+		<many-to-one name="kehu"/>
+	</class>
+</hibernate-mapping>

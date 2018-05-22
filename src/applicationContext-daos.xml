@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" -->
+<!--" http://www.springframework.org/dtd/spring-beans.dtd"> -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	
+	<bean id="userDao" class="com.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="yanchanDao" class="com.dao.impl.YanchanDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="chanpinDao" class="com.dao.impl.ChanpinDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="shichangDao" class="com.dao.impl.ShichangDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="kehuDao" class="com.dao.impl.KehuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="jingzhengDao" class="com.dao.impl.JingzhengDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="yingxiaoDao" class="com.dao.impl.YingxiaoDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	 <bean id="qianzaiDao" class="com.dao.impl.QianzaiDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>	
+    <bean id="fuwuDao" class="com.dao.impl.FuwuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>	
+	<bean id="xiaoshouDao" class="com.dao.impl.XiaoshouDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>	
+	<bean id="cangkuDao" class="com.dao.impl.CangkuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>	
+	<bean id="kucunDao" class="com.dao.impl.KucunDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="rukuDao" class="com.dao.impl.RukuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="chukuDao" class="com.dao.impl.ChukuDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="shoukuanDao" class="com.dao.impl.ShoukuanDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="tuikuanDao" class="com.dao.impl.TuikuanDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="shengChanDao" class="com.dao.impl.ShengChanDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="gongYingShangDao" class="com.dao.impl.GongYingShangDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="wuliaoDao" class="com.dao.impl.WuliaoDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="caigouDao" class="com.dao.impl.CaigouDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+</beans>

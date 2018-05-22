@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Kehu" table="t_kehu" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="kehuid"/>
+		<property name="kename" />
+		<property name="xingzhi"/>
+		<property name="leixing" />
+		<property name="dizhi"/>
+		<property name="jilutime" />
+		<property name="gongphone"/>
+		<property name="chuanzheng" />
+		<property name="youbian"/>
+		<property name="lianname"/>
+		<property name="lianphone"/>
+		<property name="mail" />
+		<property name="beijing" />
+		<property name="zhuangkuang" />
+		<property name="manyi"/>
+		<property name="zhongcheng" />
+		<property name="liutime"/>
+		<property name="liuyuanyin" />
+		<property name="biaozhi"/>
+		<many-to-one name="shichang"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.bean.Xiaoshou" table="t_xiaoshou" >
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="xiaoid"/>
+		<property name="shuliang" />
+		<property name="jine"/>
+		<property name="zherang"/>
+		<property name="shijine"/>
+		<property name="wdaibiao"/>
+		<property name="kdaibiao" />
+		<property name="xiaotime"/>
+		<property name="beizhu" />
+		<property name="zhuangtai"/>
+		<property name="shenpiren"/>
+		<property name="noyanyin"/>
+		<property name="fatime" />
+		<property name="wuliu" />
+		<property name="tdtime" />
+		<property name="tdyanyin" />
+		<property name="thtime"/>
+		<property name="thyanyin" />
+		<many-to-one name="chanpin"/>
+		<many-to-one name="kehu"/>
+	</class>
+</hibernate-mapping>
